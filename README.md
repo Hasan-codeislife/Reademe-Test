@@ -3,7 +3,7 @@
   bSecure is a universal checkout made for the Pakistan market that is easy & simple to install on any
   iOS app. It gives you an option to enable one-step check out and accept multiple payment method for your customers, as well as run your business hassle free\n. By following a few simple steps, you can be up and running in no time. Leave the rest to us. We will take care of the login, address, shipping methods and payments on your behalf. All you have to do is configure your checkout once on the bSecure Partner portal once and leave the rest to us.
   
-  [![Travis](https://img.shields.io/travis/stripe/stripe-ios/master.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS) [![CocoaPods](https://img.shields.io/cocoapods/v/BSecureCheckout.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS) [![License](https://img.shields.io/cocoapods/l/BSecureCheckout.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS) [![Platform](https://img.shields.io/cocoapods/p/Stripe.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS)
+  [![Travis](https://img.shields.io/travis/stripe/stripe-ios/master.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS) [![CocoaPods](https://img.shields.io/cocoapods/v/BSecureCheckout.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS) [![License](https://img.shields.io/cocoapods/l/BSecureCheckout.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS) [![Platform](https://img.shields.io/cocoapods/p/BSecureCheckout.svg?style=flat)](https://github.com/bSecureCheckout/bSecureCheckout-iOS)
 
 ## Requirements
 
@@ -12,7 +12,6 @@ The bSecure iOS SDK requires Xcode 11.0 with Swift 5 or later and is compatible 
 ## Prerequisites 
 - Make sure to add ``Privacy - Location When In Use Usage Description`` and ``Privacy - Location Always and When In Use Usage Description`` in info.plist of your app. This is becuase bSecure has a feature to add addresses thorugh your current location.
 - You will need to have a Google map key too for the address feature.
-- Your local documents are not shared between different browsers or computers.
 
 ## Usage
 
@@ -33,7 +32,7 @@ By following a few simple steps, you can set up your **bSecure Checkout** and **
 
 ### bSecure Checkout 
 1. Add ``pod 'BSecureCheckout`` in your podfile and run ``pod install``.
-2. Once your user is ready for checkout (presses the checkout with bSecure button) call your custom integration bSecure create order API.
+2. Once your user is ready for checkout (presses the checkout with bSecure button) call your custom integration bSecure create order API-request.
 3. In the response of this api, you will get the `order_reference` number which is required to launch the SDK.
 4.  Once you have acquired a order reference number you can call ``BSecureManager.shared.initialize(viewController: UIViewController, googleMapKey: String, orderRef: String, delegate: BSecureCheckout.BSecureManagerDelegate)``
 
